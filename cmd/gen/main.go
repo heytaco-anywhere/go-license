@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	company = flag.String("company", "", "The name of company.")
+	email = flag.String("email", "heytaco.anywhere@gmail.com", "The email of customer.")
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	// 1 year expiry.
 	d := 365 * 24 * time.Hour
 	s := &license.SigningData{
-		Company:   *company,
+		Email:   *email,
 		ExpiredAt: time.Now().Add(d),
 	}
 

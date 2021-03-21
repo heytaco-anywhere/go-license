@@ -9,7 +9,7 @@ func TestLicense_verifyKey(t *testing.T) {
 	t.Run("verify the license", func(tt *testing.T) {
 		const (
 			// It was generated to test.
-			key = "key/eyJjb21wYW55IjoiQ0kiLCJleHBpcmVkQXQiOiIyMDIyLTAzLTE0VDEzOjAyOjU3LjI3MTc0NCswOTowMCJ9.P9dIQg4IaVCi5qOX-pgd7AZI04vtbIYlDT4vUlRKskjVMsztm4VMe_0JVR8ak6PQWVbRaf3pBQj8xwH3Nu2RsvNj5unt6UM6UiA_sPgjbzi-hGtsl9IsnrNIcPrgk5_3xEg_-jfXKIrgXdjBSMUTLFO8VgcQYDALMkoMexYGuHBj-v4mHF_55cMbXB-JWiZHFOzXEXaBOYyPYUpGH-XaYgCAA1L9TF20EntQ3a7Tcv8b3d34ApwrgmPHxDJ4J3kz5uQ1tKhwQ8O9o18IaygrS7czWo952AVC1HW9RUj9cz4THWXmdsI85i2cXTyq9OcbNNPdjKDC6fd6VOvNF4a2vA=="
+			key = "key/eyJlbWFpbCI6ImhleXRhY28uYW55d2hlcmVAZ21haWwuY29tIiwiZXhwaXJlZEF0IjoiMjAyMi0wMy0yMVQxNTozNTozMy45OTM5OTcrMDk6MDAifQ==.azjHS56rTd5EZdDTF8Q_UJjaX12DBLh8FYcF80Pl3tvrRdR3kGktWr0JenF0FxWbVAxX2ixpzc3ocleuu4S-4znVBw1zMPDgiqUKFuHrsH-Pzu-i9We2tOTqH78sAkAphtm3w3qAOPNm_cv6Frzpu21R4cbU7odVlf9-xPnaH__UYwWN81sxp1CBJ4fRk2GrWyaPuuyDPNUZ7wIsXbfrIKxLhjxYaS8cJ7RehRZoYDfWPA_Z2BiPRACgEpdNUsyihdfAEnj6yRQrFsN52AfqQ00Rb2uOHT5rFdQy2nW9UtBXRga5Mw52GbT0Y__nvBRpCH5cYjS9LSfIMdsfh5P1EA=="
 		)
 
 		signing, err := Verfiy(key)
@@ -18,8 +18,8 @@ func TestLicense_verifyKey(t *testing.T) {
 			return
 		}
 
-		if signing.Company != "CI" {
-			tt.Errorf("Verfiy() = %v, expeced %v", signing.Company, "CI")
+		if signing.Email != "heytaco.anywhere@gmail.com" {
+			tt.Errorf("Verfiy() = %v, expeced %v", signing.Email, "CI")
 			return
 		}
 
