@@ -4,6 +4,11 @@ import (
 	"time"
 )
 
+var (
+	Year = 356 * 24 * time.Hour
+	Month = 30 * 24 * time.Hour
+)
+
 type (
 	// SigningData is the signing data.
 	SigningData struct {
