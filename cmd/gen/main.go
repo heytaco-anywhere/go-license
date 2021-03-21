@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
 	"time"
@@ -17,12 +16,11 @@ func main() {
 	flag.Parse()
 
 	// 1 year expiry.
-	d := 365 * 24 * time.Hour
+	d := license.Year
 	s := &license.SigningData{
-		Email:   *email,
+		Email:     *email,
 		ExpiredAt: time.Now().Add(d),
 	}
 
-	signing, _ := json.Marshal(s)
-	fmt.Printf("%s", signing)
+	fmt.Printf("%s", s.JSON())
 }
