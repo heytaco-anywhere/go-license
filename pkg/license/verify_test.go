@@ -9,7 +9,7 @@ func TestLicense_verifyKey(t *testing.T) {
 	t.Run("verify the license", func(tt *testing.T) {
 		const (
 			// It was generated to test.
-			key = "key/eyJlbWFpbCI6ImhleXRhY28uYW55d2hlcmVAZ21haWwuY29tIiwiZXhwaXJlZEF0IjoiMjAyMi0wMy0yMVQxNTozNTozMy45OTM5OTcrMDk6MDAifQ==.azjHS56rTd5EZdDTF8Q_UJjaX12DBLh8FYcF80Pl3tvrRdR3kGktWr0JenF0FxWbVAxX2ixpzc3ocleuu4S-4znVBw1zMPDgiqUKFuHrsH-Pzu-i9We2tOTqH78sAkAphtm3w3qAOPNm_cv6Frzpu21R4cbU7odVlf9-xPnaH__UYwWN81sxp1CBJ4fRk2GrWyaPuuyDPNUZ7wIsXbfrIKxLhjxYaS8cJ7RehRZoYDfWPA_Z2BiPRACgEpdNUsyihdfAEnj6yRQrFsN52AfqQ00Rb2uOHT5rFdQy2nW9UtBXRga5Mw52GbT0Y__nvBRpCH5cYjS9LSfIMdsfh5P1EA=="
+			key = "key/eyJlbWFpbCI6ImhleXRhY28uYW55d2hlcmVAZ21haWwuY29tIiwiZXhwaXJlZEF0IjoiMjAyMS0wNC0yMlQwODoyMjo0OC43MjY1NiswOTowMCJ9.aaPIotQI3tJmdlRviyNDYfUsJw0lhhoYm_8uzlv_ma0abL0gYZW0L6CmV4uV3y1SsdaoXKne_fitK-zGLueIFKH4We4Xjetl0q8Qn_snGUQ3aZDG5dj6KlCXw5DFmF36o2520kjH6gES9yWOMngTTv4Wwj8F4ME4uPYMQFQzw8QZfY3C0fNQcaEKu2cn3cU5p5ZQKoXBsyl4zjnkWTkKo2MLY-ez8ORE9E76hbiW69-ST2Lb6yVd1iLpTeh2hfGh4JWyhW7v3rnjO90bvJ2P0tixoSY-LykBlEn_RRgy3eezMPNFwsZQx1GpfJyXOl9aBT3JBsQxjlKjOO_aKel97A=="
 		)
 
 		signing, err := Verfiy(key)
